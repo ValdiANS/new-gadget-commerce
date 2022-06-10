@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', serif;
+}
+
+body {
+  background-color: #a4ebf3;
+
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand h1 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+
+  margin: 0;
+}
+
+.navbar-nav {
+  column-gap: 2rem;
+}
+
+.nav-item {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.nav-item .nav-link,
+.nav-item .dropdown-menu .dropdown-item {
+  color: #858585 !important;
+}
+
+/* Main Section */
+main section {
+  padding: 0 2rem 2rem;
+
+  color: #5a5a5a;
+}
+
+main section h1 {
+  font-weight: bold;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+}
+
+/* Card Container */
+main section .card-container {
+  width: 100%;
+  max-width: 991.98px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* About Card */
+.card-container .about-card {
+  width: 100%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 1rem;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+  border: 1px solid #f4f9f9;
+
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about-card .img-container {
+  width: 100%;
+  height: 100%;
+  max-height: 230px;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+}
+
+.about-card .img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-card .card-content {
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+}
+
+.about-card .card-content h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.about-card .card-content p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 575.98px) {
+  main section .card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  main section .card-container {
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', serif;
+}
+
+body {
+  background-color: #a4ebf3;
+
+  display: block;
+
+  overflow-x: hidden;
+}
+
+body > header {
+  min-height: 100%;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+
+  padding: 2rem 1.5rem;
+
+  color: #5a5a5a;
+
+  position: sticky !important;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0;
+}
+
+.navbar .container-fluid .navbar-brand {
+  margin: 0;
+
+  color: #5a5a5a;
+
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.navbar .container-fluid .navbar-brand strong {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-header .offcanvas-title {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-header .offcanvas-title strong {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.5rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column !important;
+  column-gap: 2rem;
+
+  height: fit-content !important;
+}
+
+.navbar-nav .nav-item {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  margin: 0.5rem 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding: 0;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid #8b8b8b;
+
+  text-align: center;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #000000 !important;
+
+  font-weight: bold;
+}
+
+.nav-item .nav-link,
+.nav-item .dropdown-menu .dropdown-item {
+  color: #858585 !important;
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body .logout-button {
+  width: 100%;
+
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  color: #f4f9f9;
+
+  padding: 0.5rem 2rem;
+
+  border: none;
+
+  background-color: #ff8181;
+
+  transition: 0.2s ease;
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body .logout-button:active {
+  transform: translateY(3px);
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+main section h1 {
+  font-weight: bold;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+
+  margin: 0;
+  margin-bottom: 2.5rem;
+
+  color: #5a5a5a;
+}
+
+/* Card */
+main section .card-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main section .card-container .card {
+  width: 100%;
+  max-width: 250px;
+  min-height: 250px;
+
+  padding: 1.5rem;
+
+  color: initial;
+  text-align: center;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: none;
+  border-radius: 20px;
+
+  background: none;
+}
+
+main section .card-container .card.sales {
+  background-color: #f4f9f9;
+}
+
+main section .card-container .card.sold {
+  color: #ffffff;
+  background-color: #ff8181;
+}
+
+main section .card-container .card.request {
+  color: #ffffff;
+  background-color: #74e48c;
+}
+
+main section .card-container .card h3 {
+  font-weight: bold;
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+main section .card-container .card h4 {
+  font-weight: bold;
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+}
+
+@media only screen and (min-width: 575.98px) {
+}
+
+@media only screen and (min-width: 767.98px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Navbar */
+  nav {
+    max-width: 250px;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .container-fluid {
+    flex-direction: column;
+  }
+
+  .navbar .container-fluid .navbar-brand {
+    margin-bottom: 3rem;
+
+    width: 100%;
+  }
+
+  /* Card */
+  main section .card-container {
+    justify-content: start;
+  }
+}
