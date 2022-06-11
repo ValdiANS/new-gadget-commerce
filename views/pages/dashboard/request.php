@@ -292,6 +292,7 @@ require_once "../../../script/config/config.php";
                   <th scope="col">Penjual</th>
                   <th scope="col">Produk</th>
                   <th scope="col">Tawaran</th>
+                  <th scope="col">Status</th>
                   <th scope="col">Respon</th>
                 </tr>
               </thead>
@@ -303,6 +304,7 @@ require_once "../../../script/config/config.php";
                   <td>Hermansyah</td>
                   <td>Asus ROG Strix</td>
                   <td>16.599.000</td>
+                  <td>Diterima</td>
                   <td>
                     <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
                       <button type="submit" class="chat">
@@ -321,6 +323,7 @@ require_once "../../../script/config/config.php";
                   <td>Hermansyah</td>
                   <td>Asus ROG Strix</td>
                   <td>16.599.000</td>
+                  <td>Diterima</td>
                   <td>
                     <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
                       <button type="submit" class="chat">
@@ -339,20 +342,67 @@ require_once "../../../script/config/config.php";
                   <td>Hermansyah</td>
                   <td>Lenovo Legion</td>
                   <td>12.599.000</td>
+                  <td>Ditolak</td>
                   <td>
-                    <button
-                      class="btn btn-success"
-                      data-bs-toggle="modal"
-                      data-bs-target="#reviewModal"
-                      onclick="reviewClickHandler(
-                        event,
-                        {
-                          name: 'Lenovo Legion'
-                        }
-                      )"
-                    >
-                      Review
-                    </button>
+                    <div class="buyer-request-respond">
+                      <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
+                        <button type="submit" class="chat">
+                          <img
+                            src="<?= base_url('assets/img/svg/chat-icon.svg') ?>"
+                            alt="Chat"
+                          />
+                        </button>
+                      </form>
+
+                      <button
+                        class="btn btn-success"
+                        data-bs-toggle="modal"
+                        data-bs-target="#reviewModal"
+                        onclick="reviewClickHandler(
+                          event,
+                          {
+                            name: 'Lenovo Legion'
+                          }
+                        )"
+                      >
+                        ☆
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>10 Januari 2022</td>
+                  <td>Hermansyah</td>
+                  <td>Acer Predator</td>
+                  <td>14.599.000</td>
+                  <td>Diterima</td>
+                  <td>
+                    <div class="buyer-request-respond">
+                      <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
+                        <button type="submit" class="chat">
+                          <img
+                            src="<?= base_url('assets/img/svg/chat-icon.svg') ?>"
+                            alt="Chat"
+                          />
+                        </button>
+                      </form>
+
+                      <button
+                        class="btn btn-success reviewed"
+                        data-bs-toggle="modal"
+                        data-bs-target="#reviewModal"
+                        onclick="reviewClickHandler(
+                          event,
+                          {
+                            name: 'Lenovo Legion'
+                          }
+                        )"
+                      >
+                        ★
+                      </button>
+                    </div>
                   </td>
                 </tr>
               </tbody>

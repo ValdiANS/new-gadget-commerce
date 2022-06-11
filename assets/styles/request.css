@@ -282,11 +282,38 @@ main section .section-header .toggle-request {
   padding-right: 1.5rem;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form {
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  > .buyer-request-respond {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buyer-request-table-container table tbody tr td:last-child form,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  .buyer-request-respond
+  form {
   width: 100%;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button {
+.buyer-request-table-container table tbody tr td:last-child form button,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  .buyer-request-respond
+  form
+  button {
   width: 100%;
 
   font-weight: bold;
@@ -307,33 +334,76 @@ main section .section-header .toggle-request {
   tr
   td:last-child
   form
+  button.checkmark,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  .buyer-request-respond
+  form
   button.checkmark {
   background-color: #74e48c;
   border-radius: 99999px;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button.cross {
+.buyer-request-table-container table tbody tr td:last-child form button.cross,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  .buyer-request-respond
+  form
+  button.cross {
   background-color: #ff8181;
   border-radius: 99999px;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button.chat {
+.buyer-request-table-container table tbody tr td:last-child form button.chat,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  .buyer-request-respond
+  form
+  button.chat {
   width: 100%;
 
-  padding: 0 0.5rem;
+  padding: 0;
 }
 
-.buyer-request-table-container table tbody tr td:last-child > button {
-  width: 100%;
+.buyer-request-table-container table tbody tr td:last-child > button,
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  > .buyer-request-respond
+  > button {
+  width: fit-content;
 
-  padding: 0.25rem 1rem;
+  /* padding: 0.25rem 1rem; */
 
   font-weight: bold;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
 
   border: none;
   border-radius: 99999px;
 
   background-color: #74e48c;
+}
+
+.buyer-request-table-container
+  table
+  tbody
+  tr
+  td:last-child
+  > .buyer-request-respond
+  > button.reviewed {
+  background-color: #fff500;
 }
 
 /* Modal Content*/
