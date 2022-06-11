@@ -126,6 +126,68 @@ require_once "../../../script/config/config.php";
       </nav>
     </header>
 
+    <!-- Review Modal -->
+    <div
+      class="modal fade"
+      id="reviewModal"
+      tabindex="-1"
+      aria-labelledby="reviewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <form action="#">
+            <h1>Review - <strong id="reviewedProductName">[Nama Produk]</strong></h1>
+
+            <div class="input-field-container">
+              <div class="input-field rating">
+                <label for="rating">Rating</label>
+                
+                <div class="select-container">
+                  <select name="rating" id="rating" required>
+                    <option value="" disabled selected hidden>Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+
+                  <span>&#9660;</span>
+                </div>
+
+                <span class="star">★</span>
+              </div>
+
+              <div class="input-field review-description">
+                <label for="reviewDescription">Review</label>
+
+                <textarea
+                  name="reviewDescription"
+                  id="reviewDescription"
+                  rows="4"
+                  placeholder="Masukkan Review"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <button
+                type="reset"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Batal
+              </button>
+
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <main>
       <section>
         <div class="section-header">
@@ -268,6 +330,29 @@ require_once "../../../script/config/config.php";
                         />
                       </button>
                     </form>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>10 Januari 2022</td>
+                  <td>Hermansyah</td>
+                  <td>Lenovo Legion</td>
+                  <td>12.599.000</td>
+                  <td>
+                    <button
+                      class="btn btn-success"
+                      data-bs-toggle="modal"
+                      data-bs-target="#reviewModal"
+                      onclick="reviewClickHandler(
+                        event,
+                        {
+                          name: 'Lenovo Legion'
+                        }
+                      )"
+                    >
+                      Review
+                    </button>
                   </td>
                 </tr>
               </tbody>

@@ -94,7 +94,17 @@ require_once "../../script/config/config.php";
             </li>
 
             <li class="nav-item">
-              <a href="<?= base_url('views/pages/login.php') ?>" class="nav-link">Login</a>
+              <a class="nav-link user-btn" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
+                <div class="img-container">
+                  <img src="<?= base_url('assets/img/default-profil-picture.png') ?>" alt="Profile Pictuer">
+                </div>
+                
+                <span>User1</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link login-btn" href="<?= base_url('views/pages/login.php') ?>">Login</a>
             </li>
           </ul>
         </div>
@@ -137,8 +147,19 @@ require_once "../../script/config/config.php";
 
           <div class="seller-card">
             <div class="seller-identity">
-              <h5 class="seller-name">Michael Supratno</h5>
-              <h5 class="seller-city">Jakarta</h5>
+              <div class="img-container">
+                <img src="<?= base_url('assets/img/default-profil-picture.png') ?>" alt="Profil Pictur">
+              </div>
+
+              <div class="seller-identity-content">
+                <a href="<?= base_url('views/pages/user-detail.php') ?>">
+                  <h5 class="seller-name">
+                    Michael Supratno
+                  </h5>
+                </a>
+
+                <h5 class="seller-city">Jakarta</h5>
+              </div>
             </div>
 
             <p class="seller-total-sales">

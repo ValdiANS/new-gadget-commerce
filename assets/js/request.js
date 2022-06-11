@@ -29,3 +29,9 @@ const toggleRequestTable = (e) => {
     return;
   }
 };
+
+const reviewClickHandler = (event, { name = '' }) => {
+  const reviewedProductName = document.getElementById('reviewedProductName');
+
+  reviewedProductName.innerText = name;
+};
