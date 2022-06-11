@@ -81,6 +81,10 @@ require_once "../../../script/config/config.php";
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('views/pages/shop.php') ?>">Shop</a>
+                </li>
+                
+                <li class="nav-item">
                   <a class="nav-link" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
                     Dashboard
                   </a>
