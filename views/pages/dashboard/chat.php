@@ -33,6 +33,8 @@ require_once "../../../script/config/config.php";
     ></script>
 
     <link rel="stylesheet" href="<?= base_url('assets/styles/chat.css') ?>" />
+
+    <script src="<?= base_url('assets/js/chat.js') ?>" defer></script>
   </head>
 
   <body>
@@ -79,13 +81,13 @@ require_once "../../../script/config/config.php";
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="<?= base_url('views/pages/dashboard/dashboard.php') ?>"
-                  >
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
                     Dashboard
                   </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/profil.php') ?>">Profil</a>
                 </li>
 
                 <li class="nav-item">
@@ -97,7 +99,13 @@ require_once "../../../script/config/config.php";
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link active" href="<?= base_url('views/pages/dashboard/chat.php') ?>">Chat</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="<?= base_url('views/pages/dashboard/chat.php') ?>"
+                  >
+                    Chat
+                  </a>
                 </li>
 
                 <li class="nav-item">
@@ -225,9 +233,9 @@ require_once "../../../script/config/config.php";
 
           <div class="chat-message-input-field">
             <form action="#">
-              <textarea name="message" rows="3"></textarea>
+              <textarea name="message" rows="3" oninput="messageInputChangeHandler(event)"></textarea>
 
-              <button type="submit">
+              <button type="submit" id="sendMessageBtn" disabled>
                 <img
                   src="<?= base_url('assets/img/svg/send-message-icon.svg') ?>"
                   alt="Send Message"

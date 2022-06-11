@@ -81,17 +81,23 @@ require_once "../../../script/config/config.php";
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="<?= base_url('views/pages/dashboard/dashboard.php') ?>"
-                  >
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
                     Dashboard
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link active" href="<?= base_url('views/pages/dashboard/sales.php') ?>">Sales</a>
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/profil.php') ?>">Profil</a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="<?= base_url('views/pages/dashboard/sales.php') ?>"
+                  >
+                    Sales
+                  </a>
                 </li>
 
                 <li class="nav-item">

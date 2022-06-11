@@ -103,6 +103,10 @@ nav {
   text-align: center;
 }
 
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000000 !important;
+}
+
 .navbar-nav .nav-item .nav-link.active {
   color: #000000 !important;
 
@@ -287,7 +291,13 @@ main section .section-header .toggle-request {
   gap: 0.25rem;
 }
 
+.buyer-request-table-container table tbody tr td:last-child form {
+  width: 100%;
+}
+
 .buyer-request-table-container table tbody tr td:last-child form button {
+  width: 100%;
+
   font-weight: bold;
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
@@ -317,7 +327,7 @@ main section .section-header .toggle-request {
 }
 
 .buyer-request-table-container table tbody tr td:last-child form button.chat {
-  width: 2rem;
+  width: 100%;
 
   padding: 0 0.5rem;
 }

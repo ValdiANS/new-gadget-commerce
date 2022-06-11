@@ -1,3 +1,7 @@
+<?php
+require_once "../../../script/config/config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,8 +32,286 @@
       defer
     ></script>
 
-    <link rel="stylesheet" href="../../../assets/styles/wishlist.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/styles/wishlist.css') ?>" />
   </head>
 
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            Halo
+            <br />
+            <strong>User1</strong>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Halo
+                <br />
+                <strong>User1</strong>
+              </h5>
+
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/dashboard.php') ?>"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/profil.php') ?>"
+                  >
+                    Profil
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/sales.php') ?>"
+                  >
+                    Sales
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/request.php') ?>"
+                  >
+                    Request
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/chat.php') ?>"
+                  >
+                    Chat
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="<?= base_url('views/pages/dashboard/wishlist.php') ?>"
+                  >
+                    Wishlist
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="<?= base_url('views/pages/dashboard/riwayat.php') ?>"
+                  >
+                    Riwayat
+                  </a>
+                </li>
+              </ul>
+
+              <form action="#">
+                <button type="submit" class="logout-button">Logout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Wishlist</h1>
+
+        <div class="wishlist-container">
+          <div class="wishlist-card-container">
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img-thumbnail-container">
+                <img
+                  src="<?= base_url('assets/img/product/1.png') ?>"
+                  alt="Product Thumbnail"
+                />
+              </div>
+
+              <div class="card-content">
+                <a href="<?= base_url('views/pages/product-detail.php') ?>">
+                  <h5 class="product-name">Xiaomi Redmi 5 3/32GB</h5>
+                </a>
+                <h4 class="product-price">Rp 400.000</h4>
+
+                <h6 class="product-seller">Michael Supratno</h6>
+                <small class="product-seller-city">Jakarta</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

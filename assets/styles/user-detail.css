@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', serif;
+}
+
+body {
+  background-color: #a4ebf3;
+
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand h1 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+
+  margin: 0;
+}
+
+.navbar-nav {
+  column-gap: 2rem;
+}
+
+.nav-item {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.nav-item .nav-link,
+.nav-item .dropdown-menu .dropdown-item {
+  color: #858585 !important;
+}
+
+/* Main */
+main {
+  padding: 1rem;
+}
+
+main section {
+  padding: 2.5rem;
+}
+
+/* User Section */
+.user-section {
+  width: 100%;
+
+  background-color: #ffffff;
+
+  border-radius: 50px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.user-profile-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 5rem;
+  row-gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.user-profile-container .img-container {
+  flex-basis: 200px;
+
+  width: 100%;
+
+  aspect-ratio: 1/1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.user-profile-container .img-container img {
+  width: 200px;
+  height: 200px;
+
+  aspect-ratio: 1/1;
+
+  border-radius: 99999px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-profile-container .user-profile-content h3,
+.user-profile-container .user-profile-content h4 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  margin: 0;
+}
+
+.user-profile-container .user-profile-content h3 {
+  font-weight: bold;
+}
+
+.user-profile-container .user-profile-content p,
+.user-section > p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+
+  margin: 0;
+}
+
+.user-action-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  margin-top: 3rem;
+}
+
+.user-action-container > button,
+.user-action-container > form > button {
+  background-color: #ccf2f4;
+
+  padding: 0.5rem 3rem;
+
+  border: none;
+  border-radius: 100px;
+
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.user-action-container > a {
+  width: 2.5rem;
+}
+
+.user-action-container > a > img {
+  width: 2.5rem;
+}
+
+/* Review Section */
+.review-section {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 2.5rem auto 0;
+  padding: 2rem 2.5rem;
+
+  background-color: #ffffff;
+
+  border-radius: 50px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.review-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review .img-container {
+  flex-basis: 50px;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.review .img-container img {
+  width: 50px;
+
+  aspect-ratio: 1/1;
+
+  border-radius: 99999px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.review .review-content-container {
+  color: #5a5a5a;
+}
+
+.review .review-content-container h5 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  margin: 0;
+}
+
+.review .review-content-container .star-and-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review .review-content-container .star-and-date .star {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+
+  color: #ded500;
+}
+
+.review .review-content-container > p {
+  margin: 0;
+
+  color: #000000;
+}
+
+@media only screen and (min-width: 575.98px) {
+  /* Main Section*/
+  main {
+    padding: 2rem;
+  }
+
+  main section {
+    padding: 2rem;
+  }
+
+  .user-profile-container {
+    flex-direction: row;
+  }
+
+  .user-profile-container .img-container {
+    flex-basis: 200px;
+
+    width: 100%;
+    height: 200px;
+
+    aspect-ratio: 1/1;
+
+    border-radius: 99999px;
+
+    overflow: hidden;
+  }
+
+  .user-action-container {
+    flex-direction: row;
+  }
+
+  /* Review Section */
+  .review {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+}

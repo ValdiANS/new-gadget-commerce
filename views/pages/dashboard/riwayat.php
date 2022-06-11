@@ -79,15 +79,15 @@ require_once "../../../script/config/config.php";
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="<?= base_url('views/pages/dashboard/dashboard.php') ?>"
-                  >
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
                     Dashboard
                   </a>
                 </li>
 
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/profil.php') ?>">Profil</a>
+                </li>
+                
                 <li class="nav-item">
                   <a class="nav-link" href="<?= base_url('views/pages/dashboard/sales.php') ?>">Sales</a>
                 </li>
@@ -105,7 +105,13 @@ require_once "../../../script/config/config.php";
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link active" href="<?= base_url('views/pages/dashboard/riwayat.php') ?>">Riwayat</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="<?= base_url('views/pages/dashboard/riwayat.php') ?>"
+                  >
+                    Riwayat
+                  </a>
                 </li>
               </ul>
 
@@ -133,6 +139,7 @@ require_once "../../../script/config/config.php";
                   <th scope="col">Produk</th>
                   <th scope="col">Status</th>
                   <th scope="col">Tanggal Respon</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
 
@@ -144,6 +151,16 @@ require_once "../../../script/config/config.php";
                   <td>Asus ROG Strix</td>
                   <td>Ditolak</td>
                   <td>8 Januari 2022</td>
+                  <td>
+                    <a
+                      href="<?= base_url('views/pages/dashboard/request.php') ?>"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Lihat Detail Transaksi"
+                    >
+                      &#x22EF;
+                    </a>
+                  </td>
                 </tr>
 
                 <tr>
@@ -153,6 +170,16 @@ require_once "../../../script/config/config.php";
                   <td>Asus ROG Strix</td>
                   <td>Diterima</td>
                   <td>9 Januari 2022</td>
+                  <td>
+                    <a
+                      href="<?= base_url('views/pages/dashboard/request.php') ?>"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Lihat Detail Transaksi"
+                    >
+                      &#x22EF;
+                    </a>
+                  </td>
                 </tr>
               </tbody>
             </table>

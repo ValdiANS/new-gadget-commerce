@@ -48,6 +48,45 @@ body {
   color: #858585 !important;
 }
 
+.nav-item .nav-link.user-btn {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: #f4f9f9;
+
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+
+  border-radius: 99999px;
+}
+
+.nav-item .nav-link.user-btn .img-container {
+  width: 100%;
+}
+
+.nav-item .nav-link.user-btn .img-container img {
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 99999px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.nav-item .nav-link.login-btn {
+  background-color: #f4f9f9;
+  padding: 0.5rem 1rem;
+
+  text-align: center;
+
+  border-radius: 99999px;
+}
+
 /* Main Section*/
 main section {
   padding: 1rem;

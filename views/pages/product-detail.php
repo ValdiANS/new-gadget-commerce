@@ -94,14 +94,6 @@ require_once "../../script/config/config.php";
             </li>
 
             <li class="nav-item">
-              <a href="<?= base_url('views/pages/dashboard/request.php') ?>" class="nav-link">Request</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="<?= base_url('views/pages/dashboard/wishlist.php') ?>" class="nav-link">Wishlist</a>
-            </li>
-
-            <li class="nav-item">
               <a href="<?= base_url('views/pages/login.php') ?>" class="nav-link">Login</a>
             </li>
           </ul>

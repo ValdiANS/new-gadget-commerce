@@ -92,15 +92,17 @@ require_once "../../script/config/config.php";
             </li>
 
             <li class="nav-item">
-              <a href="<?= base_url('views/pages/dashboard/request.php') ?>" class="nav-link">Request</a>
+              <a class="nav-link user-btn" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
+                <div class="img-container">
+                  <img src="<?= base_url('assets/img/default-profil-picture.png') ?>" alt="Profile Pictuer">
+                </div>
+                
+                <span>User1</span>
+              </a>
             </li>
 
             <li class="nav-item">
-              <a href="<?= base_url('views/pages/dashboard/wishlist.php') ?>" class="nav-link">Wishlist</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="<?= base_url('views/pages/login.php') ?>" class="nav-link">Login</a>
+              <a class="nav-link login-btn" href="<?= base_url('views/pages/login.php') ?>">Login</a>
             </li>
           </ul>
         </div>

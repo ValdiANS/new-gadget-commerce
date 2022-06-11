@@ -117,8 +117,11 @@ require_once "./script/config/config.php";
         </p>
 
         <div class="links-container">
-          <a href="<?= base_url('views/pages/login.php') ?>" class="login">LOGIN</a>
-          <a href="<?= base_url('views/pages/register.php') ?>" class="register">REGISTER</a>
+          <div class="login-and-register-container">
+            <a href="<?= base_url('views/pages/login.php') ?>" class="login">LOGIN</a>
+            <a href="<?= base_url('views/pages/register.php') ?>" class="register">REGISTER</a>
+          </div>
+          
           <a href="<?= base_url('views/pages/shop.php') ?>" class="shop">GO SHOP</a>
         </div>
       </section>

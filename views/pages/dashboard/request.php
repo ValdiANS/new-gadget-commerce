@@ -81,13 +81,13 @@ require_once "../../../script/config/config.php";
             <div class="offcanvas-body">
               <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="<?= base_url('views/pages/dashboard/dashboard.php') ?>"
-                  >
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
                     Dashboard
                   </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/profil.php') ?>">Profil</a>
                 </li>
 
                 <li class="nav-item">
@@ -95,7 +95,13 @@ require_once "../../../script/config/config.php";
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link active" href="<?= base_url('views/pages/dashboard/request.php') ?>">Request</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="<?= base_url('views/pages/dashboard/request.php') ?>"
+                  >
+                    Request
+                  </a>
                 </li>
 
                 <li class="nav-item">
@@ -223,8 +229,8 @@ require_once "../../../script/config/config.php";
                   <th scope="col">Tanggal Request</th>
                   <th scope="col">Penjual</th>
                   <th scope="col">Produk</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Tanggal Respon</th>
+                  <th scope="col">Tawaran</th>
+                  <th scope="col">Respon</th>
                 </tr>
               </thead>
 
@@ -234,8 +240,17 @@ require_once "../../../script/config/config.php";
                   <td>8 Januari 2022</td>
                   <td>Hermansyah</td>
                   <td>Asus ROG Strix</td>
-                  <td>Ditolak</td>
-                  <td>8 Januari 2022</td>
+                  <td>16.599.000</td>
+                  <td>
+                    <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
+                      <button type="submit" class="chat">
+                        <img
+                          src="<?= base_url('assets/img/svg/chat-icon.svg') ?>"
+                          alt="Chat"
+                        />
+                      </button>
+                    </form>
+                  </td>
                 </tr>
 
                 <tr>
@@ -243,8 +258,17 @@ require_once "../../../script/config/config.php";
                   <td>9 Januari 2022</td>
                   <td>Hermansyah</td>
                   <td>Asus ROG Strix</td>
-                  <td>Diterima</td>
-                  <td>9 Januari 2022</td>
+                  <td>16.599.000</td>
+                  <td>
+                    <form action="<?= base_url('views/pages/dashboard/chat.php') ?>">
+                      <button type="submit" class="chat">
+                        <img
+                          src="<?= base_url('assets/img/svg/chat-icon.svg') ?>"
+                          alt="Chat"
+                        />
+                      </button>
+                    </form>
+                  </td>
                 </tr>
               </tbody>
             </table>

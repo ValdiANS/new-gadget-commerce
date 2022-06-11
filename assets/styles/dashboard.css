@@ -103,6 +103,10 @@ nav {
   text-align: center;
 }
 
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000000 !important;
+}
+
 .navbar-nav .nav-item .nav-link.active {
   color: #000000 !important;
 

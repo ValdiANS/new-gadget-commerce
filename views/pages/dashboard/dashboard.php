@@ -89,6 +89,10 @@ require_once "../../../script/config/config.php";
                 </li>
 
                 <li class="nav-item">
+                  <a class="nav-link" href="<?= base_url('views/pages/dashboard/profil.php') ?>">Profil</a>
+                </li>
+
+                <li class="nav-item">
                   <a class="nav-link" href="<?= base_url('views/pages/dashboard/sales.php') ?>">Sales</a>
                 </li>
 
@@ -117,6 +121,7 @@ require_once "../../../script/config/config.php";
         </div>
       </nav>
     </header>
+    
 
     <main>
       <section>

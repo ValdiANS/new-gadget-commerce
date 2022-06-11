@@ -103,6 +103,10 @@ nav {
   text-align: center;
 }
 
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000000 !important;
+}
+
 .navbar-nav .nav-item .nav-link.active {
   color: #000000 !important;
 
@@ -193,6 +197,12 @@ main section h1 {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.25rem;
+}
+
+.riwayat-table-container table tbody tr td:last-child a {
+  color: inherit;
+
+  text-decoration: none;
 }
 
 .riwayat-table-container table tbody tr td:last-child form button {

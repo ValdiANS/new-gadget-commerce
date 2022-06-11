@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', serif;
+}
+
+body {
+  background-color: #a4ebf3;
+
+  display: block;
+
+  overflow-x: hidden;
+}
+
+body > header {
+  min-height: 100%;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+
+  padding: 2rem 1.5rem;
+
+  color: #5a5a5a;
+
+  position: sticky !important;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0;
+}
+
+.navbar .container-fluid .navbar-brand {
+  margin: 0;
+
+  color: #5a5a5a;
+
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.navbar .container-fluid .navbar-brand strong {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-header .offcanvas-title {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-header .offcanvas-title strong {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.5rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column !important;
+  column-gap: 2rem;
+
+  height: fit-content !important;
+}
+
+.navbar-nav .nav-item {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  margin: 0.5rem 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding: 0;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid #8b8b8b;
+
+  text-align: center;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000000 !important;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #000000 !important;
+
+  font-weight: bold;
+}
+
+.nav-item .nav-link,
+.nav-item .dropdown-menu .dropdown-item {
+  color: #858585 !important;
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body .logout-button {
+  width: 100%;
+
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  color: #f4f9f9;
+
+  padding: 0.5rem 2rem;
+
+  border: none;
+
+  background-color: #ff8181;
+
+  transition: 0.2s ease;
+}
+
+.navbar .container-fluid .offcanvas .offcanvas-body .logout-button:active {
+  transform: translateY(3px);
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+main section {
+  padding: 2rem 1.5rem;
+
+  border-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+
+  color: #5a5a5a;
+
+  background-color: #ffffff;
+
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Profil Section */
+
+/* Profil Image Container */
+.profil-img-container {
+  flex-basis: 200px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.profil-img-container .img-container {
+  width: 200px;
+  height: 100%;
+  max-height: 200px;
+
+  border-radius: 99999px;
+
+  aspect-ratio: 1/1;
+
+  overflow: hidden;
+}
+
+.profil-img-container .img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.profil-img-container > button {
+  color: #4fd3c4;
+
+  margin-top: 0.5rem;
+
+  border: none;
+  background: none;
+}
+
+/* Profil Content Container */
+.profil-content-container {
+  width: 100%;
+}
+
+.profil-content-container h1 {
+  font-weight: bold;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+
+  margin: 0;
+  margin-bottom: 2rem;
+
+  color: #5a5a5a;
+}
+
+.profil-content-container .profil-form-container > form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profil-content-container .profil-form-container > form .input-field-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .input-field-container
+  .input-field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .input-field-container
+  .input-field
+  > label {
+  width: 100%;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .input-field-container
+  .input-field
+  > input {
+  width: 100%;
+
+  padding: 0.125rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 99999px;
+
+  color: #5a5a5a;
+
+  background-color: #ffffff;
+
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .input-field-container
+  .input-field
+  > input:disabled {
+  filter: brightness(0.95);
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .input-field-container
+  .input-field
+  > input[type='date']:disabled {
+  background-color: #b7b7b7;
+}
+
+.profil-content-container .profil-form-container > form .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .btn-container
+  > button {
+  font-weight: bold;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  border: none;
+  border-radius: 99999px;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .btn-container
+  > button[type='submit'] {
+  background-color: #4fd3c4;
+}
+
+.profil-content-container
+  .profil-form-container
+  > form
+  .btn-container
+  > button[type='button'] {
+  background-color: #ff8181;
+}
+
+.profil-content-container .profil-form-container > .btn-container {
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.profil-content-container .profil-form-container > .btn-container > button {
+  font-weight: bold;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  border: none;
+  border-radius: 99999px;
+}
+
+.profil-content-container
+  .profil-form-container
+  > .btn-container
+  > button:first-child {
+  color: #ffffff;
+
+  background-color: #4fd3c4;
+}
+
+.profil-content-container
+  .profil-form-container
+  > .btn-container
+  > button:last-child {
+  color: #4fd3c4;
+
+  background-color: transparent;
+}
+
+/* Change Password Section */
+section.change-password-section {
+  display: block;
+}
+
+section.change-password-section > h1 {
+  font-weight: bold;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+
+  margin: 0;
+  margin-bottom: 1.5rem;
+
+  padding-bottom: 0.5rem;
+
+  color: #5a5a5a;
+
+  border-bottom: 1px solid #8b8b8b;
+}
+
+/* Change Password Form Container */
+.change-password-form-container form {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.change-password-form-container form .input-field-container > .input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-password-form-container
+  form
+  .input-field-container
+  > .input-field:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.change-password-form-container
+  form
+  .input-field-container
+  > .input-field
+  > label
+  > h3 {
+  font-weight: bold;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+
+  margin: 0;
+}
+
+.change-password-form-container
+  form
+  .input-field-container
+  > .input-field
+  > input {
+  background-color: #ffffff;
+
+  margin-bottom: 0.125rem;
+  padding: 0.125rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 99999px;
+
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.change-password-form-container form .btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.change-password-form-container form .btn-container > button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  color: #ffffff;
+
+  font-weight: bold;
+
+  border: none;
+  border-radius: 99999px;
+}
+
+.change-password-form-container form .btn-container > button:first-child {
+  background-color: #4fd3c4;
+}
+
+.change-password-form-container form .btn-container > button:last-child {
+  background-color: #ff8181;
+}
+
+/* Change Profil Photo Section */
+.change-profil-photo-section .change-profil-photo-img-container {
+  flex-basis: 200px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.change-profil-photo-img-container .img-container {
+  width: 200px;
+  height: 100%;
+  max-height: 200px;
+
+  border-radius: 99999px;
+
+  aspect-ratio: 1/1;
+
+  overflow: hidden;
+}
+
+/* Change Profil Photo Content Container */
+.change-profil-photo-content-container {
+  width: 100%;
+}
+
+.change-profil-photo-content-container h1 {
+  font-weight: bold;
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+
+  margin: 0;
+  margin-bottom: 2rem;
+
+  color: #5a5a5a;
+}
+
+/* Change Profil Photo Form Container */
+.change-profil-photo-form-container > form .input-field-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.change-profil-photo-form-container > form .input-field-container .input-field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.change-profil-photo-form-container
+  > form
+  .input-field-container
+  .input-field
+  > label {
+  width: 100%;
+}
+
+.change-profil-photo-form-container
+  > form
+  .input-field-container
+  .input-field
+  > input {
+  width: 100%;
+
+  padding: 0.125rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 99999px;
+
+  color: #5a5a5a;
+
+  background-color: #ffffff;
+
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.change-profil-photo-form-container form .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.change-profil-photo-form-container form .btn-container > button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  color: #ffffff;
+
+  font-weight: bold;
+
+  border: none;
+  border-radius: 99999px;
+}
+
+.change-profil-photo-form-container form .btn-container > button:first-child {
+  background-color: #4fd3c4;
+}
+
+.change-profil-photo-form-container form .btn-container > button:last-child {
+  background-color: #ff8181;
+}
+
+@media only screen and (min-width: 575.98px) {
+  /* Main Section */
+  main section {
+    flex-direction: row;
+    justify-content: initial;
+  }
+
+  /* Profil Content Container */
+  .profil-content-container
+    .profil-form-container
+    > form
+    .input-field-container
+    .input-field {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .profil-content-container
+    .profil-form-container
+    > form
+    .input-field-container
+    .input-field
+    > label {
+    flex-basis: 150px;
+  }
+
+  .profil-content-container .profil-form-container > form .btn-container {
+    justify-content: initial;
+  }
+
+  .profil-content-container .profil-form-container > .btn-container {
+    flex-direction: row;
+  }
+
+  /* Change Profil Photo Form Container */
+  .change-profil-photo-form-container
+    > form
+    .input-field-container
+    .input-field {
+    flex-direction: row;
+  }
+
+  .change-profil-photo-form-container
+    > form
+    .input-field-container
+    .input-field
+    > label {
+    flex-basis: 150px;
+  }
+
+  .change-profil-photo-form-container form .btn-container {
+    justify-content: initial;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Navbar */
+  nav {
+    max-width: 250px;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .container-fluid {
+    flex-direction: column;
+  }
+
+  .navbar .container-fluid .navbar-brand {
+    margin-bottom: 3rem;
+
+    width: 100%;
+  }
+
+  /* Main Section */
+  main section {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* Main Section */
+  main section {
+    flex-direction: row;
+    justify-content: initial;
+  }
+}

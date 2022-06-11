@@ -65,13 +65,7 @@ require_once "../../script/config/config.php";
         >
           <ul class="navbar-nav mb-lg-0">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="<?= base_url('') ?>"
-              >
-                Home
-              </a>
+              <a class="nav-link" href="<?= base_url('') ?>">Home</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -101,33 +95,18 @@ require_once "../../script/config/config.php";
               </ul>
             </li>
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="accountNavbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="<?= base_url('assets/img/svg/user-solid.svg') ?>"
-                  alt="User Icon"
-                  class="user"
-                />
+            <li class="nav-item">
+              <a class="nav-link user-btn" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
+                <div class="img-container">
+                  <img src="<?= base_url('assets/img/default-profil-picture.png') ?>" alt="Profile Pictuer">
+                </div>
+                
+                <span>User1</span>
               </a>
+            </li>
 
-              <ul class="dropdown-menu" aria-labelledby="accountNavbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="<?= base_url('views/pages/dashboard/dashboard.php') ?>">
-                    Dashboard
-                  </a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item" href="#">Logout</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link login-btn" href="<?= base_url('views/pages/login.php') ?>">Login</a>
             </li>
           </ul>
         </div>
