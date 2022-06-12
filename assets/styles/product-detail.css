@@ -293,16 +293,17 @@ main {
 	gap: 2rem;
 }
 
-.seller-card .seller-action form {
-	width: 100%;
-}
-
-.seller-card .seller-action form button[type="submit"] {
+.seller-card .seller-action > .ask-seller-btn {
 	width: 100%;
 
 	padding: 0.25rem 1rem;
 
 	font-weight: bold;
+
+	color: inherit;
+
+	text-align: center;
+	text-decoration: none;
 
 	border: none;
 	border-radius: 99999px;

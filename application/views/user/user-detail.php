@@ -28,7 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
       </div>
 
-      <p>
+      <p class="total-sold-items">
         Have sold
         <strong>
           <?php

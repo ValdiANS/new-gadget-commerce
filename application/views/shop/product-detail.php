@@ -106,9 +106,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
           </p>
 
           <div class="seller-action">
-            <form action="<?= site_url("chat/sale/") . $detail_product->sale_id ?>">
-              <button type="submit">Ask Seller</button>
-            </form>
+            <a
+              href="<?= site_url("chat/sale/") . $detail_product->sale_id ?>"
+              class="ask-seller-btn"
+            >
+                Ask Seller
+            </a>
 
             <a href="#">
               <img src="<?= base_url('assets/img/svg/whatsapp-brands.svg') ?>" alt="Whatsapp" />
