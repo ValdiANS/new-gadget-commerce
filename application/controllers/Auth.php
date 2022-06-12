@@ -66,7 +66,8 @@ class Auth extends CI_Controller
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
-                        'username' => $user['username']
+                        'username' => $user['username'],
+                        'user_id' => $user['id']
                     ];
                     $this->session->set_userdata($data);
                     if ($user['username']) {
@@ -101,6 +102,7 @@ class Auth extends CI_Controller
     {
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('username');
+        $this->session->unset_userdata('user_id');
 
         $this->session->set_flashdata('message', '
         <div class="alert alert-success alert-dismissible">
