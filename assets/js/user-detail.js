@@ -5,7 +5,7 @@ const seeReviewBtnClickHandler = (event) => {
   const reviewSection = document.getElementById('reviewSection');
 
   if (!isReviewSectionActive) {
-    seeReviewBtn.innerText = 'Tutup Review';
+    seeReviewBtn.innerText = 'Close Reviews';
     reviewSection.classList.remove('d-none');
 
     isReviewSectionActive = true;
@@ -13,7 +13,7 @@ const seeReviewBtnClickHandler = (event) => {
     return;
   }
 
-  seeReviewBtn.innerText = 'Lihat Review';
+  seeReviewBtn.innerText = 'See Reviews';
   reviewSection.classList.add('d-none');
   isReviewSectionActive = false;
 };
