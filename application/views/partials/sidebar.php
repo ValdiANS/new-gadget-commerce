@@ -75,9 +75,9 @@
                     </li>
                 </ul>
 
-                <form action="#">
-                    <button type="submit" class="logout-button">Logout</button>
-                </form>
+                
+                <a href="#" class="logout-button">Logout</a>
+                
             </div>
         </div>
     </div>
