@@ -8,10 +8,53 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <?php $this->load->view('partials/head') ?>
   <title><?= $title ?></title>
   <link rel="stylesheet" href="<?= base_url('assets/styles/product-detail.css') ?>" />
+
+  <script src="<?= base_url('assets/js/product-detail.js') ?>"></script>
 </head>
 
 <body>
   <?php $this->load->view('partials/topbar') ?>
+
+  <!-- Buy Product Modal -->
+  <div
+    class="modal fade"
+    id="buyProductModal"
+    tabindex="-1"
+    aria-labelledby="buyProductModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form action="#" class="buy-product-form">
+          <h1>
+            Berapa harga yang ingin diajukan?
+          </h1>
+          
+          <div class="input-field-container">
+            <input
+              type="number"
+              name="price"
+              id="priceInput"
+              min="0"
+              placeholder="Masukkan Harga"
+            >
+          </div>
+
+          <div class="btn-container">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="btn btn-danger"
+            >
+              Batal
+            </button>
+
+            <button type="submit" class="btn btn-success">Beli</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="product-card-container-container">
@@ -36,7 +79,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
 
             <form action="#">
-              <button type="submit">Buy</button>
+              <button
+                type="submit"
+                data-bs-toggle="modal"
+                data-bs-target="#buyProductModal"
+                onclick="buyBtnClickHandler(
+                  event,
+                  {
+                    price: <?= $detail_product->price ?>
+                  }
+                )"
+              >
+                Buy
+              </button>
             </form>
           </div>
         </div>
