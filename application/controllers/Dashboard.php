@@ -6,16 +6,19 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        //$this->load->model("dashboard_model");
+        $this->load->model("dashboard_model");
     }
 
     public function index()
     {
         $data['user'] = $this->db->get_where('detail_user', ['user_id' => $this->session->userdata('user_id')])->row();
-        $data['title'] = "Shop | Gadget Commerce";
-        $data['page'] = 'shop';
-        //$data['shop'] = $this->shop_model->getAll();
-        $this->load->view('dashboard/dashboard', $data);
+        $data['title'] = "Dashboard | Gadget Commerce";
+        $data['page'] = 'dashboard';
+        $data['countSellerOnSale'] = $this->dashboard_model->getCountSellerOnSale();
+        $data['countSellerSold'] = $this->dashboard_model->getCountSellerSold();
+        $data['countRequestForSeller'] = $this->dashboard_model->getCountRequestForSeller();
+        $data['countRequestForBuyer'] = $this->dashboard_model->getCountRequestForBuyer();
+        $this->load->view('dashboard/index', $data);
     }
 
     /*public function detail($id = null)

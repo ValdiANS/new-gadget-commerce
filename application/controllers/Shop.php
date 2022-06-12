@@ -15,7 +15,7 @@ class Shop extends CI_Controller
         $data['title'] = "Shop | Gadget Commerce";
         $data['page'] = 'shop';
         $data['shop'] = $this->shop_model->getAll();
-        $this->load->view('shop/shop', $data);
+        $this->load->view('shop/list', $data);
     }
 
     public function detail($id = null)
