@@ -14,4 +14,18 @@ class Home extends CI_Controller
 		$data['page'] = 'home';
 		$this->load->view('home', $data);
 	}
+
+	public function about()
+	{
+		$data['title'] = "About Us | Gadget Commerce";
+		$data['page'] = 'about';
+		$this->load->view('about/index', $data);
+	}
+
+	public function contact()
+	{
+		$data['title'] = "Contact | Gadget Commerce";
+		$data['page'] = 'contact';
+		$this->load->view('about/contact', $data);
+	}
 }
