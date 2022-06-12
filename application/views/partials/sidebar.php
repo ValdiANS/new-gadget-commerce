@@ -33,34 +33,45 @@
                         <a class="nav-link" href="<?= site_url('shop') ?>">Shop</a>
                     </li>
 
+                    <?php
+                    function active($current_page)
+                    {
+                        $url_array =  explode('/', $_SERVER['REQUEST_URI']);
+                        $url = end($url_array);
+                        if ($current_page == $url) {
+                            echo 'active'; //class name
+                        }
+                    }
+                    ?>
+
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="<?= site_url('dashboard') ?>">
+                        <a class="nav-link <?php active('dashboard'); ?>" aria-current="page" href="<?= site_url('dashboard') ?>">
                             Dashboard
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('profile') ?>">Profile</a>
+                        <a class="nav-link <?php active('profile') ?>" href="<?= site_url('profile') ?>">Profile</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('sales') ?>">Sales</a>
+                        <a class="nav-link <?php active('sales') ?>" href="<?= site_url('sales') ?>">Sales</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('request') ?>">Request</a>
+                        <a class="nav-link <?php active('request') ?>" href="<?= site_url('request') ?>">Request</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('chat') ?>">Chat</a>
+                        <a class="nav-link <?php active('chat') ?>" href="<?= site_url('chat') ?>">Chat</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('wishlist') ?>">Wishlist</a>
+                        <a class="nav-link <?php active('wishlist') ?>" href="<?= site_url('wishlist') ?>">Wishlist</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('transaction') ?>">Log Transaction</a>
+                        <a class="nav-link <?php active('transaction/log') ?>" href="<?= site_url('transaction/log') ?>">Transaction Log</a>
                     </li>
                 </ul>
 

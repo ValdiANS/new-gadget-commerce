@@ -188,18 +188,23 @@ main section .card-container .card {
   background: none;
 }
 
-main section .card-container .card.sales {
+main section .card-container .card.white {
   background-color: #f4f9f9;
 }
 
-main section .card-container .card.sold {
+main section .card-container .card.green {
+  color: #ffffff;
+  background-color: #74e48c;
+}
+
+main section .card-container .card.red {
   color: #ffffff;
   background-color: #ff8181;
 }
 
-main section .card-container .card.request {
+main section .card-container .card.gold {
   color: #ffffff;
-  background-color: #74e48c;
+  background-color: #ded500;
 }
 
 main section .card-container .card h3 {
