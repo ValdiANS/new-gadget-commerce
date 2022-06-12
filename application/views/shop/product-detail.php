@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
 
             <div class="seller-identity-content">
-              <a href="<?= base_url('views/pages/user-detail.php') ?>">
+              <a href="<?= site_url('user/detail/') . $detail_product->username ?>">
                 <h5 class="seller-name">
                   <?= $detail_product->seller ?>
                 </h5>
@@ -60,12 +60,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
           <p class="seller-total-sales">
             Have sold
-            <strong><?= $detail_product->seller_sold ?></strong>
-            items
+            <strong>
+              <?php
+              if ($detail_product->seller_sold == NULL) {
+                echo 0;
+              } else {
+                echo $detail_product->seller_sold ?>
+            </strong>
+          <?php } ?>
+          items
           </p>
 
           <div class="seller-action">
-            <form action="./dashboard/chat.php">
+            <form action="<?= site_url("chat/sale/") . $detail_product->sale_id ?>">
               <button type="submit">Ask Seller</button>
             </form>
 

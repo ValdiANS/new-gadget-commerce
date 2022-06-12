@@ -4,6 +4,7 @@ class Shop_model extends CI_Model
 {
     private $_table = "shop";
     private $_table2 = "detail_product";
+    private $_table3 = "all_review";
 
     public function getAll()
     {
