@@ -61,14 +61,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <main>
         <section>
             <h1>
-                Kelompok 8
+                G-Commerce
                 <br />
-                Web Programming
             </h1>
 
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-                quam!
+                Penuhi kebutuhan gadget Anda.
             </p>
 
             <div class="links-container">

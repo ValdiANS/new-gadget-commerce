@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="user-profile-content">
           <h3><?= $detail_user->name ?></h3>
           <h4><?= $detail_user->city ?></h4>
-          <p>Joined from <?= date_format(date_create($detail_user->date_joined), "l, d M Y") ?></p>
+          <p>Joined from <?= date_format(date_create($detail_user->date_joined), "l, F d Y") ?></p>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
 
             <div class="review-content-container">
-              <h5><?= $row->usernameSeller ?></h5>
+              <h5><?= $row->usernameBuyer ?></h5>
               <div class="star-and-date">
                 <div class="star">
                   <?php
@@ -85,7 +85,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   }
                   ?>
                 </div>
-                <div class="date"><?= date_format(date_create($row->date_selled), "l, d M Y") ?></div>
+                <div class="date"><?= date_format(date_create($row->date_selled), "l, F d Y") ?></div>
               </div>
               <div class="product-name"><?= $row->sale ?></div>
 

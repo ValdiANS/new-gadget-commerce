@@ -219,7 +219,7 @@ main section .section-header .toggle-request {
 	gap: 0.25rem;
 }
 
-.seller-request-table-container table tbody tr td:last-child form button {
+.seller-request-table-container table tbody tr td:last-child a button {
 	font-weight: bold;
 	font-size: 1.5rem; /* 24px */
 	line-height: 2rem; /* 32px */
@@ -237,18 +237,18 @@ main section .section-header .toggle-request {
 	tbody
 	tr
 	td:last-child
-	form
+	a
 	button.checkmark {
 	background-color: #74e48c;
 	border-radius: 99999px;
 }
 
-.seller-request-table-container table tbody tr td:last-child form button.cross {
+.seller-request-table-container table tbody tr td:last-child a button.cross {
 	background-color: #ff8181;
 	border-radius: 99999px;
 }
 
-.seller-request-table-container table tbody tr td:last-child form button.chat {
+.seller-request-table-container table tbody tr td:last-child a button.chat {
 	width: 2rem;
 
 	padding: 0 0.5rem;
@@ -313,7 +313,7 @@ main section .section-header .toggle-request {
 	width: 100%;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button,
+.buyer-request-table-container table tbody tr td:last-child a button,
 .buyer-request-table-container
 	table
 	tbody
@@ -355,7 +355,7 @@ main section .section-header .toggle-request {
 	border-radius: 99999px;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button.cross,
+.buyer-request-table-container table tbody tr td:last-child a button.cross,
 .buyer-request-table-container
 	table
 	tbody
@@ -368,7 +368,7 @@ main section .section-header .toggle-request {
 	border-radius: 99999px;
 }
 
-.buyer-request-table-container table tbody tr td:last-child form button.chat,
+.buyer-request-table-container table tbody tr td:last-child a button.chat,
 .buyer-request-table-container
 	table
 	tbody

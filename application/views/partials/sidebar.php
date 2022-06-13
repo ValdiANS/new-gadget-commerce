@@ -63,7 +63,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php active('chat') ?>" href="<?= site_url('chat') ?>">Chat</a>
+                        <a class="nav-link <?php if ($this->uri->segment(1) == 'chat') : echo "active";
+                                            endif; ?>" href="<?= site_url('chat') ?>">Chat</a>
                     </li>
 
                     <li class="nav-item">
@@ -71,13 +72,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php active('transaction/log') ?>" href="<?= site_url('transaction/log') ?>">Transaction Log</a>
+                        <a class="nav-link <?php active('log') ?>" href="<?= site_url('transaction') ?>">Transaction Log</a>
                     </li>
                 </ul>
 
-                
-                <a href="#" class="logout-button">Logout</a>
-                
+                <a href="<?= site_url('auth/logout') ?>" class="logout-button">Logout</a>
             </div>
         </div>
     </div>

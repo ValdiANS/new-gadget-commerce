@@ -19,21 +19,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <div class="modal fade" id="buyProductModal" tabindex="-1" aria-labelledby="buyProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form action="#" class="buy-product-form">
+        <form method="post" id="sendRequest" class="buy-product-form">
           <h1>
-            Berapa harga yang ingin diajukan?
+            Price request?
           </h1>
 
           <div class="input-field-container">
-            <input type="number" name="price" id="priceInput" min="0" placeholder="Masukkan Harga">
+            <input type="hidden" name="sale_id" id="saleIDInput">
+            <input type="number" name="price" id="priceInput" min="0" placeholder="Price" onkeydown="removeErrorPrice()">
           </div>
+          <span id="price_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
           <div class="btn-container">
             <button type="button" data-bs-dismiss="modal" class="btn btn-danger">
-              Batal
+              Cancel
             </button>
 
-            <button type="submit" class="btn btn-success">Beli</button>
+            <button type="submit" id="applyRequest" class="btn btn-success">Apply</button>
           </div>
         </form>
       </div>
@@ -66,9 +68,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
               <button type="submit" data-bs-toggle="modal" data-bs-target="#buyProductModal" onclick="buyBtnClickHandler(
                   event,
                   {
-                    price: <?= $detail_product->price ?>
+                    price: <?= $detail_product->price ?>,
+                    sale_id: <?= $detail_product->sale_id ?>
                   }
-                )">
+                )" <?= ($this->session->userdata('username')) ? '' : 'disabled'; ?>>
                 Buy
               </button>
             </form>
@@ -106,11 +109,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
           </p>
 
           <div class="seller-action">
-            <a
-              href="<?= site_url("chat/sale/") . $detail_product->sale_id ?>"
-              class="ask-seller-btn"
-            >
-                Ask Seller
+            <a href="<?= site_url("chat/sale/") . $detail_product->sale_id ?>" class="ask-seller-btn">
+              Ask Seller
             </a>
 
             <a href="#">
@@ -141,7 +141,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
           <div>
             <strong>Added :</strong>
-            <?= date_format(date_create($detail_product->date_added), "l, d M Y") ?>
+            <?= date_format(date_create($detail_product->date_added), "l, F d Y") ?>
           </div>
         </div>
 
@@ -153,6 +153,39 @@ defined('BASEPATH') or exit('No direct script access allowed');
       </article>
     </section>
   </main>
+  <?php $this->load->view('partials/js') ?>
+  <script>
+    function removeErrorPrice() {
+      $('#price_error').html('');
+    };
+    $("#sendRequest").on('submit', function(event) {
+      event.preventDefault();
+      $.ajax({
+        url: '<?= site_url('shop/addRequest') ?>',
+        method: 'post',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(data) {
+          if (data.error) {
+            if (data.price != '') {
+              $('#price_error').html(data.price_error);
+              $('#price_error').slideDown(250);
+            }
+          }
+          if (data.success) {
+            $('#buyProductModal').modal('hide');
+            Swal.fire({
+              icon: 'success',
+              title: data.message,
+              showConfirmButton: false,
+              timer: 2500
+            })
+          }
+          $('#applyRequest').attr('disabled', false);
+        }
+      })
+    });
+  </script>
 </body>
 
 </html>

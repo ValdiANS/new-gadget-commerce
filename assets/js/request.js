@@ -10,7 +10,7 @@ const toggleRequestTable = (e) => {
     sellerRequest.classList.add('d-none');
 
     toggleRequestButton.innerHTML =
-      'Lihat tawaran sebagai <strong>penjual</strong>';
+      'View your request as <strong>seller</strong>';
 
     activeRequestTable = 'buyer';
 
@@ -22,7 +22,7 @@ const toggleRequestTable = (e) => {
     buyerRequest.classList.add('d-none');
 
     toggleRequestButton.innerHTML =
-      'Lihat tawaran sebagai <strong>pembeli</strong>';
+      'View your request as <strong>buyer</strong>';
 
     activeRequestTable = 'seller';
 
