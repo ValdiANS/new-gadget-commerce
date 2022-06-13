@@ -7,6 +7,8 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         $this->load->model("dashboard_model");
+        $this->load->model("wishlist_model");
+        cek_login();
     }
 
     public function index()
@@ -21,16 +23,13 @@ class Dashboard extends CI_Controller
         $this->load->view('dashboard/index', $data);
     }
 
-    /*public function detail($id = null)
+    public function wishlist()
     {
         $data['user'] = $this->db->get_where('detail_user', ['user_id' => $this->session->userdata('user_id')])->row();
-        $data['title'] = "Product Detail | Gadget Commerce";
-        $data['page'] = 'shop';
-        $shop = $this->shop_model;
-        $data["detail_product"] = $shop->getById($id);
-        if (!$data["detail_product"]) show_404();
-
-        $this->load->view("shop/product-detail", $data);
+        $data['title'] = "Wishlist | Gadget Commerce";
+        $data['page'] = 'wishlist';
+        $wishlist = $this->wishlist_model;
+        $data["wishlists"] = $wishlist->getAll();
+        $this->load->view('dashboard/wishlist', $data);
     }
-    */
 }

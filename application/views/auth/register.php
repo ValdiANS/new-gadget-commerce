@@ -20,28 +20,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <form id="registerForm" method="post">
         <h1>Create Account</h1>
         <div class="input-container">
-          <input type="text" name="name" placeholder="Masukkan nama" onkeydown="removeErrorName()" />
+          <input type="text" name="name" placeholder="Full name" onkeydown="removeErrorName()" />
           <span id="name_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="text" name="email" placeholder="Masukkan alamat e-mail" onkeydown="removeErrorEmail()" />
+          <input type="text" name="email" placeholder="E-mail address" onkeydown="removeErrorEmail()" />
           <span id="email_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="text" name="username" placeholder="Masukkan nama pengguna" onkeydown="removeErrorUsername()" />
+          <input type="text" name="username" placeholder="Username" onkeydown="removeErrorUsername()" />
           <span id="username_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="password" name="password" placeholder="Masukkan kata sandi" onkeydown="removeErrorPassword()" />
+          <input type="password" name="password" placeholder="Password" onkeydown="removeErrorPassword()" />
           <span id="password_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="password" name="password2" placeholder="Masukkan ulang kata sandi" onkeydown="removeErrorPassword2()" />
+          <input type="password" name="password2" placeholder="Confirm password" onkeydown="removeErrorPassword2()" />
           <span id="password2_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="text" name="phone" placeholder="Masukkan nomor hape" onkeydown="removeErrorPhone()" />
+          <input type="text" name="phone" placeholder="Phone number" onkeydown="removeErrorPhone()" />
           <span id="phone_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="text" name="address" placeholder="Masukkan Alamat" onkeydown="removeErrorAddress()" />
+          <input type="text" name="address" placeholder="Address" onkeydown="removeErrorAddress()" />
           <span id="address_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
 
-          <input type="text" name="city" placeholder="Masukkan Kota Asal" onkeydown="removeErrorCity()" />
+          <input type="text" name="city" placeholder="City" onkeydown="removeErrorCity()" />
           <span id="city_error" style="margin-top: -10px; margin-bottom: -10px;"></span>
         </div>
 

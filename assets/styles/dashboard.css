@@ -173,8 +173,8 @@ main section .card-container {
 
 main section .card-container .card {
 	width: 100%;
-	max-width: 200px;
-	min-height: 200px;
+	max-width: 210px;
+	min-height: 230px;
 
 	padding: 1.5rem;
 
